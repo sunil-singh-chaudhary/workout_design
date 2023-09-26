@@ -18,7 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
   var data = [0.0, 0.3, 0.7, 1.0, 1.1, 1.5, 1.9, 2.0, 2.5, 2.9, 3.0];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     environment = context.read<FlavourNotifier>().environment;
   }
