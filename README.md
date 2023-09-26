@@ -15,7 +15,7 @@ Inside lib folder create a flavour_enviornmnet folder inside it we have differen
 
 ## Deployment
 ```bash
-#flutter run --flavour production --target lib/flavour_enviornment/main_production
+  flutter run --flavour production --target lib/flavour_enviornment/main_production
 ```
 ## For stagging
 ```bash
