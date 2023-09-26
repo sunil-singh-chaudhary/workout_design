@@ -4,8 +4,12 @@ A  Flutter project.
 
 ## Getting Started
 
-1. For running in development mode write this command in terminal
+1. For running in development mode write the below cmd make sure your main_developemnt path is same where you placed command in terminal
+```bash
+
    flutter run --flavour development --target lib/flavour_enviornment/main_development
+
+```   
 
 Inside lib folder create a flavour_enviornmnet folder inside it we have different runnning folder like for main_development folder for running in developed or debug mode same for othere you have to just change the 
 
