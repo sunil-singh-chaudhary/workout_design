@@ -11,7 +11,7 @@ A  Flutter project.
 
 ```   
 
-Inside lib folder create a flavour_enviornmnet folder inside it we have different runnning folder like for main_development folder for running in developed or debug mode same for othere you have to just change the 
+Inside lib folder create a flavour_enviornmnet folder inside it we have different runnning folder like for main_development folder for running in developedment Mode or debugmode same for othere lie ProductionMode you have to just change the 
 
 ## Deployment
 ```bash
