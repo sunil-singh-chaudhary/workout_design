@@ -1,18 +1,26 @@
 # Fitness Pro
 
-A new Flutter project.
+A  Flutter project.
 
 ## Getting Started
 
 1. For running in development mode write this command in terminal
    flutter run --flavour development --target lib/flavour_enviornment/main_development
 
-1. lib folder inside it create a flavour_enviornmnet folder inside it we have different runnning folder like for main_development folder for runnig in develop or debug mode same for othere you have to just change the #flutter run --flavour production --target lib/flavour_enviornment/main_production or for stagging
-2. flutter run --flavour stagging --target lib/flavour_enviornment/main_stagging
+Inside lib folder create a flavour_enviornmnet folder inside it we have different runnning folder like for main_development folder for running in developed or debug mode same for othere you have to just change the 
 
-So i used ChangeNotifier for checking it all over app, where i have to use it
+## Deployment
+```bash
+#flutter run --flavour production --target lib/flavour_enviornment/main_production
+```
+## For stagging
+```bash
+flutter run --flavour stagging --target lib/flavour_enviornment/main_stagging  
+```
 
-1. # For Android in build.gradle after buildType add the below lines of Flavours
+## In Android , build.gradle and after buildType add the following  lines for Flavours
+  
+  ```bash
      flavorDimensions 'default'
     productFlavors {
         production {
@@ -34,9 +42,12 @@ So i used ChangeNotifier for checking it all over app, where i have to use it
         }
     }
 
+ ```
 
-2. # vscode create a new launch.json using ctrl+shift+D and copy paste
+ 
+## vscode create a new launch.json using ctrl+shift+D and copy paste below code
 
+  ```bash
 {
     "version": "0.2.0",
     "configurations": [
@@ -160,21 +171,32 @@ So i used ChangeNotifier for checking it all over app, where i have to use it
     ]
   }
   
+```
 
-  # For generating released apk or bundle when you dont have main.dart instead you have main_production.dart then run command is like 
+  ## For generating or released apk or bundle when you dont have main.dart instead you have main_production.dart then run command is like 
+  ```bash
 
-   flutter build appbundle or apk  --target lib/flavour_enviornment/main_production.dart
+     flutter build appbundle or apk  --target lib/flavour_enviornment/main_production.dart
 
-   add sign Properties in app/build.gradle and create a file name key.properties 
-   and add below lines 
+```
+
+## Now add signed Properties in app/build.gradle and create a file name key.properties and add below lines 
+  ```bash
+
+
    storePassword= 123456789
    keyPassword= 123456789
    keyAlias=upload
    storeFile= F:\\demoflutteerWorkspace\\designdemoworkout\\android\\app\\upload-keystore.jks store this file in this place inside android/app/upload-keystrore.jks
 
-   # for generating jks file use below command
+```
 
-   keytool -genkey -v -keystore F:\demoflutteerWorkspace\designdemoworkout\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+   ## For generating jks file use below command
 
+  ```bash
+
+      keytool -genkey -v -keystore F:\demoflutteerWorkspace\designdemoworkout\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+```
 
 
