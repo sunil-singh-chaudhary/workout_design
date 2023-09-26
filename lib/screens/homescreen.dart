@@ -1,6 +1,9 @@
-import 'package:chart_sparkline/chart_sparkline.dart';
-import 'package:fitnesspro/screens/horizontaldateview.dart';
+import 'package:fitnesspro/changeProvider/flavour_notifier.dart';
+import 'package:fitnesspro/flavour_enviornment/EnvironmentConfig.dart';
+import 'package:fitnesspro/widget/horizontaldateview.dart';
+import 'package:fitnesspro/widget/linechart.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,7 +14,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late String environment;
   var data = [0.0, 0.3, 0.7, 1.0, 1.1, 1.5, 1.9, 2.0, 2.5, 2.9, 3.0];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    environment = context.read<FlavourNotifier>().environment;
+  }
 
   late bool isCurrent;
   @override
@@ -36,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 5.h,
           margin: EdgeInsets.only(left: 5.w),
           child: Text(
-            'Amara',
+            'Amara -> ${environment == EnvironmentConfig.development ? 'Developer' : environment == EnvironmentConfig.staging ? 'Staging' : 'Production'}',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: const Color(0xff6f8dcb),
@@ -48,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Container(
           width: 90.w,
           height: 10.h,
-          child: HorizontalCalendar(),
+          child: const HorizontalCalendar(),
         ),
         Container(
           height: 30.h,
@@ -74,40 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   firstwidgetTracker(),
                 ],
               ),
-              _buildLineChart()
+              LineChartWidget(data: data)
             ]),
           ),
         ),
       ]),
     );
-  }
-
-  Container _buildLineChart() {
-    return Container(
-        padding: EdgeInsets.all(2.w),
-        //PIE CHART
-        height: 25.h,
-        width: 50.w,
-        child: Center(
-          child: Sparkline(
-            data: data,
-            lineGradient: const LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromARGB(255, 155, 157, 163),
-                Color(0xffffffff),
-              ],
-            ),
-            lineWidth: 10,
-            pointsMode: PointsMode.atIndex,
-            pointIndex: 7,
-            pointSize: 16.0,
-            pointColor: Colors.amber,
-            useCubicSmoothing: true,
-            cubicSmoothingFactor: 0.2,
-          ),
-        ));
   }
 
   Container firstwidgetTracker() {

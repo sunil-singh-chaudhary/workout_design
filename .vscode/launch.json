@@ -5,12 +5,12 @@
         "name": "DEV | DEBUG",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_development.dart",
+        "program": "lib/flavour_enviornment/main_development.dart",
         "args": [
           "--flavor",
           "development",
           "--target",
-          "lib/main_development.dart"
+          "lib/flavour_enviornment/main_development.dart"
         ],
         "flutterMode": "debug"
       },
@@ -18,12 +18,12 @@
         "name": "DEV | RELEASE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_development.dart",
+        "program": "lib/flavour_enviornment/main_development.dart",
         "args": [
           "--flavor",
           "development",
           "--target",
-          "lib/main_development.dart"
+          "lib/flavour_enviornment/main_development.dart"
         ],
         "flutterMode": "release"
       },
@@ -31,12 +31,12 @@
         "name": "DEV | PROFILE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_development.dart",
+        "program": "lib/flavour_enviornment/main_development.dart",
         "args": [
           "--flavor",
           "development",
           "--target",
-          "lib/main_development.dart"
+          "lib/flavour_enviornment/main_development.dart"
         ],
         "flutterMode": "profile"
       },
@@ -44,12 +44,12 @@
         "name": "STG | DEBUG",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_staging.dart",
+        "program": "lib/flavour_enviornment/main_staging.dart",
         "args": [
           "--flavor",
           "staging",
           "--target",
-          "lib/main_staging.dart"
+          "lib/flavour_enviornment/main_staging.dart"
         ],
         "flutterMode": "debug"
       },
@@ -57,12 +57,12 @@
         "name": "STG | RELEASE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_staging.dart",
+        "program": "lib/flavour_enviornment/main_staging.dart",
         "args": [
           "--flavor",
           "staging",
           "--target",
-          "lib/main_staging.dart"
+          "lib/flavour_enviornment/main_staging.dart"
         ],
         "flutterMode": "release"
       },
@@ -70,12 +70,12 @@
         "name": "STG | PROFILE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_staging.dart",
+        "program": "lib/flavour_enviornment/main_staging.dart",
         "args": [
           "--flavor",
           "staging",
           "--target",
-          "lib/main_staging.dart"
+          "lib/flavour_enviornment/main_staging.dart"
         ],
         "flutterMode": "profile"
       },
@@ -83,12 +83,12 @@
         "name": "PROD | DEBUG",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_production.dart",
+        "program": "lib/flavour_enviornment/main_production.dart",
         "args": [
           "--flavor",
           "production",
           "--target",
-          "lib/main_production.dart"
+          "lib/flavour_enviornment/main_production.dart"
         ],
         "flutterMode": "debug"
       },
@@ -96,12 +96,12 @@
         "name": "PROD | RELEASE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_production.dart",
+        "program": "lib/flavour_enviornment/main_production.dart",
         "args": [
           "--flavor",
           "production",
           "--target",
-          "lib/main_production.dart"
+          "lib/flavour_enviornment/main_production.dart"
         ],
         "flutterMode": "release"
       },
@@ -109,12 +109,12 @@
         "name": "PROD | PROFILE",
         "request": "launch",
         "type": "dart",
-        "program": "lib/main_production.dart",
+        "program": "lib/flavour_enviornment/main_production.dart",
         "args": [
           "--flavor",
           "production",
           "--target",
-          "lib/main_production.dart"
+          "lib/flavour_enviornment/main_production.dart"
         ],
         "flutterMode": "profile"
       },

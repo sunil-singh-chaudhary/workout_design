@@ -6,14 +6,14 @@ import 'profilescreen.dart';
 import 'searchscreen.dart';
 import 'settingscreen.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class NavigationScreenMain extends StatefulWidget {
+  const NavigationScreenMain({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<NavigationScreenMain> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends State<NavigationScreenMain> {
   int _currentindex = 0;
   List widgetscreen = const [
     HomeScreen(),
