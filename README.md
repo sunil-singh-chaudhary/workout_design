@@ -160,3 +160,21 @@ So i used ChangeNotifier for checking it all over app, where i have to use it
     ]
   }
   
+
+  # For generating released apk or bundle when you dont have main.dart instead you have main_production.dart then run command is like 
+
+   flutter build appbundle or apk  --target lib/flavour_enviornment/main_production.dart
+
+   add sign Properties in app/build.gradle and create a file name key.properties 
+   and add below lines 
+   storePassword= 123456789
+   keyPassword= 123456789
+   keyAlias=upload
+   storeFile= F:\\demoflutteerWorkspace\\designdemoworkout\\android\\app\\upload-keystore.jks store this file in this place inside android/app/upload-keystrore.jks
+
+   # for generating jks file use below command
+
+   keytool -genkey -v -keystore F:\demoflutteerWorkspace\designdemoworkout\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+
+
