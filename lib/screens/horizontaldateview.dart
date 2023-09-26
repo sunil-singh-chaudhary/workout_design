@@ -11,16 +11,17 @@ class HorizontalCalendar extends StatefulWidget {
 }
 
 class _HorizontalCalendarState extends State<HorizontalCalendar> {
-  late DateTime selectedDate;
-
   final _scrollController = AutoScrollController();
 
   DateTime currentDate = DateTime.now();
   late DateTime startDate, endDate;
   DateTime? date;
+  late DateTime selectedDate;
   late double itemCount;
+
   bool isSelected = false;
   int? selectedIndex;
+
   @override
   void initState() {
     super.initState();

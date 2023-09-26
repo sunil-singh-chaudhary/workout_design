@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import 'screens/homescreen.dart';
-import 'screens/profilescreen.dart';
-import 'screens/searchscreen.dart';
-import 'screens/settingscreen.dart';
+import 'homescreen.dart';
+import 'profilescreen.dart';
+import 'searchscreen.dart';
+import 'settingscreen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -36,8 +36,8 @@ class _MainScreenState extends State<MainScreen> {
               _currentindex = value;
             });
           },
-          selectedItemColor: Color(0xff5767ea),
-          unselectedItemColor: Color.fromARGB(255, 38, 42, 78),
+          selectedItemColor: const Color(0xff5767ea),
+          unselectedItemColor: const Color.fromARGB(255, 38, 42, 78),
           type: BottomNavigationBarType.fixed,
           elevation: 1,
           currentIndex: _currentindex,
@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(
                 size: 20.sp,
                 Icons.search,
-                color: Color(0xff5767ea),
+                color: const Color(0xff5767ea),
               ),
               label: 'Search',
             ),
@@ -62,7 +62,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(
                 size: 20.sp,
                 Icons.person,
-                color: Color(0xff5767ea),
+                color: const Color(0xff5767ea),
               ),
               label: 'Profile',
             ),
@@ -70,7 +70,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(
                 size: 20.sp,
                 Icons.settings,
-                color: Color(0xff5767ea),
+                color: const Color(0xff5767ea),
               ),
               label: 'Settings',
             ),

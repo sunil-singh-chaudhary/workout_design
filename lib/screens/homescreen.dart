@@ -1,7 +1,6 @@
 import 'package:chart_sparkline/chart_sparkline.dart';
-import 'package:designdemoworkout/screens/horizontaldateview.dart';
+import 'package:fitnesspro/screens/horizontaldateview.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 
 class HomeScreen extends StatefulWidget {
