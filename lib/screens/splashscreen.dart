@@ -1,8 +1,11 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:fitnesspro/routes/AppRouter.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 import 'navigationScreen.dart';
 
+@RoutePage(name: 'splashScreen')
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -58,7 +61,10 @@ class SplashScreen extends StatelessWidget {
               ),
               SizedBox(height: 2.h),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // AutoRouter.of(context).push(const NavigationRoute());
+                  context.router.push(NavigationRoute());
+                },
                 style: ButtonStyle(
                     elevation: MaterialStateProperty.all(1),
                     backgroundColor: MaterialStateProperty.all(Colors.white)),
@@ -72,13 +78,7 @@ class SplashScreen extends StatelessWidget {
                   height: 5.h,
                   alignment: Alignment.topCenter,
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NavigationScreenMain()),
-                      );
-                    },
+                    onTap: () {},
                     child: Text(
                       'Forgot Your Password ?',
                       style: TextStyle(color: Colors.white, fontSize: 10.sp),

@@ -1,11 +1,9 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:fitnesspro/routes/AppRouter.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import 'homescreen.dart';
-import 'profilescreen.dart';
-import 'searchscreen.dart';
-import 'settingscreen.dart';
-
+@RoutePage(name: 'navigationRoute')
 class NavigationScreenMain extends StatefulWidget {
   const NavigationScreenMain({super.key});
 
@@ -14,13 +12,6 @@ class NavigationScreenMain extends StatefulWidget {
 }
 
 class _MainScreenState extends State<NavigationScreenMain> {
-  int _currentindex = 0;
-  List widgetscreen = const [
-    HomeScreen(),
-    SearchScreen(),
-    ProfileScreen(),
-    SettingScreen(),
-  ];
   @override
   void initState() {
     super.initState();
@@ -28,53 +19,47 @@ class _MainScreenState extends State<NavigationScreenMain> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: widgetscreen[_currentindex],
-      bottomNavigationBar: BottomNavigationBar(
-          onTap: (value) {
-            setState(() {
-              _currentindex = value;
-            });
+    return AutoTabsScaffold(
+      routes: const [
+        HomeScreenRoute(),
+        SearchScreenRoute(),
+        ProfileScreenRoute(),
+        SettingScreenRoute()
+      ],
+      bottomNavigationBuilder: (context, tabsRouter) {
+        return BottomNavigationBar(
+          currentIndex: tabsRouter.activeIndex,
+          onTap: (index) {
+            if (tabsRouter.activeIndex == index) {
+              // navigateToTabAndClearStack(index);
+            } else {
+              tabsRouter.setActiveIndex(index);
+            }
           },
-          selectedItemColor: const Color(0xff5767ea),
-          unselectedItemColor: const Color.fromARGB(255, 38, 42, 78),
-          type: BottomNavigationBarType.fixed,
-          elevation: 1,
-          currentIndex: _currentindex,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(
-                size: 20.sp,
-                Icons.home,
-                color: const Color(0xff5767ea),
-              ),
+              icon:
+                  Icon(size: 20.sp, Icons.home, color: const Color(0xff5767ea)),
               label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                size: 20.sp,
-                Icons.search,
-                color: const Color(0xff5767ea),
-              ),
+                  size: 20.sp, Icons.search, color: const Color(0xff5767ea)),
               label: 'Search',
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                size: 20.sp,
-                Icons.person,
-                color: const Color(0xff5767ea),
-              ),
+                  size: 20.sp, Icons.person, color: const Color(0xff5767ea)),
               label: 'Profile',
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                size: 20.sp,
-                Icons.settings,
-                color: const Color(0xff5767ea),
-              ),
+                  size: 20.sp, Icons.settings, color: const Color(0xff5767ea)),
               label: 'Settings',
             ),
-          ]),
+          ],
+        );
+      },
     );
   }
 }

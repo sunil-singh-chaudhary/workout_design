@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:fitnesspro/changeProvider/flavour_notifier.dart';
 import 'package:fitnesspro/flavour_enviornment/EnvironmentConfig.dart';
 import 'package:fitnesspro/widget/horizontaldateview.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
+@RoutePage(name: 'homeScreenRoute')
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
